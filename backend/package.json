@@ -1,0 +1,40 @@
+{
+  "name": "vehical_booking_backend",
+  "version": "1.0.0",
+  "description": "this is for test ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server/server.js",
+    "dev": "nodemon ./src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mu24081999/vehical_booking_system.git"
+  },
+  "keywords": [
+    "umar"
+  ],
+  "author": "M.Umar.Liaqat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mu24081999/vehical_booking_system/issues"
+  },
+  "homepage": "https://github.com/mu24081999/vehical_booking_system#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "chalk": "^5.6.2",
+    "compression": "^1.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.1.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.14"
+  }
+}
