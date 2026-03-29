@@ -42,7 +42,8 @@ type ApiResponse<T> = {
 };
 
 const API_BASE_URL =
-  import.meta.env.REACT_APP_API_URL || "http://localhost:9000/api/v1";
+  import.meta.env.REACT_APP_API_URL ||
+  "https://vehical-booking-system-gj84.onrender.com/api/v1";
 
 function App() {
   const [email, setEmail] = useState("mu24081999@gmail.com");
