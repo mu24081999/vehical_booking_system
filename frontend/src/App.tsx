@@ -41,7 +41,8 @@ type ApiResponse<T> = {
   data: T;
 };
 
-const API_BASE_URL = "http://localhost:9000/api/v1";
+const API_BASE_URL =
+  import.meta.env.REACT_APP_API_URL || "http://localhost:9000/api/v1";
 
 function App() {
   const [email, setEmail] = useState("mu24081999@gmail.com");
