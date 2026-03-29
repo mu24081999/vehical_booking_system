@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { FormEvent } from "react";
 import "./App.css";
 
@@ -44,8 +44,8 @@ type ApiResponse<T> = {
 const API_BASE_URL = "http://localhost:9000/api/v1";
 
 function App() {
-  const [email, setEmail] = useState("admin@example.com");
-  const [password, setPassword] = useState("Password123");
+  const [email, setEmail] = useState("mu24081999@gmail.com");
+  const [password, setPassword] = useState("12345678");
   const [token, setToken] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -129,6 +129,12 @@ function App() {
     if (typeof vehicle === "string") return vehicle;
     return `${vehicle.name} ${vehicle.model}`;
   };
+
+  useEffect(() => {
+    if (token) {
+      loadDashboard();
+    }
+  }, [token]);
 
   return (
     <div className="app">
