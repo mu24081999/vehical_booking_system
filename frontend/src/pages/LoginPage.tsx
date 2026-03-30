@@ -23,32 +23,49 @@ export function LoginPage({ loading, onLogin }: LoginPageProps) {
         <p className="muted">
           Sign in to view vehicles, create bookings and access dashboard.
         </p>
-        <form className="form-grid column" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            value={form.email}
-            onChange={(event) =>
-              setForm((prev) => ({ ...prev, email: event.target.value }))
-            }
-            placeholder="Email"
-            required
-          />
-          <input
-            type="password"
-            value={form.password}
-            onChange={(event) =>
-              setForm((prev) => ({ ...prev, password: event.target.value }))
-            }
-            placeholder="Password"
-            required
-            minLength={8}
-          />
+        <form className="form-grid column auth-form" onSubmit={handleSubmit}>
+          <div className="auth-field">
+            <label htmlFor="login-email" className="auth-label">
+              Email Address
+            </label>
+            <input
+              id="login-email"
+              type="email"
+              value={form.email}
+              onChange={(event) =>
+                setForm((prev) => ({ ...prev, email: event.target.value }))
+              }
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div className="auth-field">
+            <label htmlFor="login-password" className="auth-label">
+              Password
+            </label>
+            <input
+              id="login-password"
+              type="password"
+              value={form.password}
+              onChange={(event) =>
+                setForm((prev) => ({ ...prev, password: event.target.value }))
+              }
+              placeholder="Enter password"
+              required
+              minLength={8}
+            />
+          </div>
+
           <button type="submit" disabled={loading}>
             {loading ? "Please wait..." : "Login"}
           </button>
         </form>
         <div className="auth-switch">
-          <button type="button" className="linkish" onClick={() => navigate("/signup")}>
+          <button
+            type="button"
+            className="linkish"
+            onClick={() => navigate("/signup")}
+          >
             Need an account? Go to signup
           </button>
         </div>
